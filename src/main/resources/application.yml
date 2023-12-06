@@ -1,0 +1,30 @@
+micronaut:
+  server:
+    port: 8082
+  application:
+    name: micro
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+    
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/Klinika
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: admin
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+
+
+
+  
+
